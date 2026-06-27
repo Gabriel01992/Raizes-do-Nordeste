@@ -1,0 +1,47 @@
+body{
+    font-family: Arial, sans-serif;
+    background:#f5f5f5;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.pagamento-container{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+.gateway{
+    margin:20px 0;
+    padding:20px;
+    border:2px dashed #ff9800;
+    border-radius:10px;
+    background:#fff8ef;
+}
+
+button{
+    background:#ff9800;
+    color:white;
+    border:none;
+    padding:12px 25px;
+    border-radius:8px;
+    cursor:pointer;
+}
+/* RESPONSIVO */
+
+@media (max-width: 900px) {
+
+  .container {
+
+    grid-template-columns: 1fr;
+  }
+
+  .menu {
+
+    display: none;
+  }
+}

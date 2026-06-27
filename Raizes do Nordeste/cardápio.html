@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Raízes do Nordeste</title>
+
+  <link rel="stylesheet" href="CSS/menu.css">
+  <link rel="shortcut icon" href="img/Cardápio.png" type="image/x-icon">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="logo">
+      <h1>🌵 Raízes do Nordeste</h1>
+    </div>
+  <!-- NAVEGAÇÃO -->
+    <nav class="menu">
+      <a href="index.html" data-page="inicio">Início</a>
+      <a href="cardápio.html" class="active" data-page="cardapio">Cardápio</a>
+      <a href="promoções.html" data-page="promocoes">Promoções</a>
+      <a href="pontos.html" data-page="pedidos">Pontos</a>
+    </nav>
+    <!-- AÇÕES -->
+    <div class="header-actions">
+      <a href="Login.html" class="profile-btn">👤 Perfil</a>
+      <button class="cart-button" onclick="toggleCart()">🛒<span id="cart-count">0</span></button>
+    </div>
+  </header>
+
+  <!-- CONTEÚDO -->
+  <main class="container">
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="category-title">🌿 Categorias</div>
+      <button class="category-btn active" onclick="filterProducts('Todos')">🏠Todos</button>
+      <button class="category-btn" onclick="filterProducts('Pratos Principais')">🍽️Pratos Principais</button>
+      <button class="category-btn" onclick="filterProducts('Bebidas')">🥤Bebidas</button>
+      <button class="category-btn" onclick="filterProducts('Sobremesas')">🍰Sobremesas</button>
+      <button class="category-btn" onclick="filterProducts('Combos')">🎁Combos</button>
+      
+      <div class="shipping-card">
+        <h3>🚚 Frete grátis</h3>
+        <p>acima de R$ 50,00</p>
+      </div>
+    </aside>
+
+    <!-- Banner -->
+    <div class="content">
+      <section class="hero">
+        <div class="hero-content">
+          <h1>O melhor do Nordeste perto de você!</h1>
+          <p>Ingredientes selecionados e o sabor que só a nossa terra tem.</p>
+          <a href="promoções.html"><button>Ver Promoções</button></a>
+        </div>
+      </section>
+
+    <!-- PRODUTOS -->
+      <section class="products">
+        <div id="products-container"></div>
+      </section>
+    </div>
+  </main>
+
+  <div class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+      <h2>🛒</h2>
+      <button onclick="toggleCart()">✕</button>
+    </div>
+    <div id="cart-items"></div>
+      <h3 id="total">Total: R$ 0,00</h3>
+      <button class="checkout-btn" onclick="irParaPagamento()">Finalizar Pedido</button>
+    <div id="mensagemCarrinho" class="mensagem-erro">
+    ⚠️ Adicione pelo menos um item ao carrinho para continuar.
+</div>
+  </div>
+
+    <!-- VANTAGENS -->
+  <section class="benefits">
+    <div class="benefit">🌽 Comida típica nordestina</div>
+    <div class="benefit">🔒 Pagamento seguro</div>
+    <div class="benefit">🚚 Entrega rápida</div>
+    <div class="benefit">🎁 Programa de fidelidade</div>
+  </section>
+
+  <!-- TELA DE COMPRA -->
+  <div id="successModal" class="modal">
+    <div class="modal-content">
+        <div class="success-icon">✔</div>
+        <h2>Pedido Realizado!</h2>
+        <p>Obrigado pela preferência. Seu pedido foi enviado com sucesso.</p>
+        <button onclick="closeModal()">Fechar</button>
+    </div>
+</div>
+
+  <script src="JS/cardapio.js"></script>
+
+</body>
+</html>

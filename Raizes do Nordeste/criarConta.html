@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+<meta charset="UTF-8">
+<title>Criar Conta</title>
+
+<link rel="stylesheet" href="CSS/cadastro.css">
+<link rel="shortcut icon" href="img/Perfil.png" type="image/x-icon">
+</head>
+
+<body>
+    <div class="container">
+        <h1>📝 Criar Conta</h1>
+        <div id="sucesso" class="sucesso">✅ Conta criada com sucesso! Redirecionando para o login...</div>
+    <form id="cadastroForm">
+        <input type="text" placeholder="Nome Completo" required>
+        <input type="email" placeholder="E-mail" required>
+        <input type="password" placeholder="Senha" required>
+        <input type="password" placeholder="Confirmar Senha" required>
+         <!-- LGPD -->
+          <!-- Mensagem de erro -->
+            <p id="erroLgpd" class="erro"></p>
+        <div class="lgpd">
+            <input type="checkbox" id="consent">
+            <label for="consent">
+              Aceito os termos de uso e a política
+              de privacidade conforme a LGPD.
+            </label>
+          </div>
+        <button type="submit">Cadastrar</button>
+
+    </form>
+<a href="login.html">Voltar ao login</a>
+</div>
+
+
+<script src="JS/Cadastro.js"></script>
+
+</body>
+</html>

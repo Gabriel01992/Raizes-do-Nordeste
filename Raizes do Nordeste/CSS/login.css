@@ -1,0 +1,152 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: Arial, sans-serif;
+  background: #f5f1ea;
+}
+
+/* CONTAINER */
+.login-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+}
+
+/* BANNER */
+.login-banner{
+  background:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("https://i.pinimg.com/736x/49/16/8e/49168e8f34c93e9c5deffe09da035806.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding: 40px;
+}
+
+.overlay{
+  text-align: center;
+}
+
+.overlay h1{
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+.overlay p{
+  font-size: 22px;
+}
+
+/* FORM */
+.login-form-section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.form-box{
+  background: white;
+  width: 100%;
+  max-width: 450px;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.form-box h2 {
+  color: #2f5d3f;
+  margin-bottom: 10px;
+}
+
+.subtitle{
+  margin-bottom: 30px;
+  color: #666;
+}
+
+/* INPUTS */
+.input-group{
+  margin-bottom: 20px;
+}
+
+.input-group label{
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.input-group input{
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+
+/* BOTÃO */
+button{
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  background: #d86b1f;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+button:hover{
+  background: #b95a18;
+}
+
+/* LINKS */
+.links{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.links a{
+  color: #2f5d3f;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+
+.mensagem-login{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.9);
+  background: white;
+  color: #2f5d3f;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,.2);
+  opacity: 0;
+  visibility: hidden;
+  transition: all .3s ease;
+  z-index: 9999;
+}
+
+.mensagem-login.mostrar{
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* RESPONSIVO */
+@media (max-width: 900px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+  .menu {
+    display: none;
+  }
+}

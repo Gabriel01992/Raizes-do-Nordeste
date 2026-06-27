@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Login | Raízes do Nordeste</title>
+
+  <link rel="stylesheet" href="CSS/login.css">
+  <link rel="shortcut icon" href="img/Perfil.png" type="image/x-icon">
+
+</head>
+
+<body>
+
+  <main class="login-container">
+
+    <!-- LADO ESQUERDO -->
+    <section class="login-banner">
+      <div class="overlay">
+        <h1>🌵 Raízes do Nordeste</h1>
+        <p>Sabores que contam histórias.</p>
+      </div>
+    </section>
+
+    <!-- FORMULÁRIO -->
+    <section class="login-form-section">
+      <div class="form-box">
+        <h2>Entrar</h2>
+        <p class="subtitle">Acesse sua conta para realizar pedidos.</p>
+        <form id="loginForm">
+
+          <!-- EMAIL -->
+          <div class="input-group">
+            <label>E-mail</label>
+            <input
+              type="email"
+              id="email"
+              placeholder="Digite seu e-mail"
+              required
+            >
+          </div>
+
+          <!-- SENHA -->
+          <div class="input-group">
+            <label>Senha</label>
+            <input
+              type="password"
+              id="password"
+              placeholder="Digite sua senha"
+              required
+            >
+          </div>
+
+
+          <!-- BOTÃO -->
+          <button type="submit">Entrar</button>
+        </form>
+
+        <!-- LINKS -->
+        <div class="links">
+          <a href="senha.html">Esqueci minha senha</a>
+          <a href="criarConta.html">Criar conta</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div id="mensagemLogin" class="mensagem-login">
+  <h3>✅ Login realizado com sucesso!</h3>
+  <p>Você será redirecionado para a página inicial em <span id="contador">3</span> segundos.</p>
+</div>
+
+  <script src="JS/login.js"></script>
+</body>
+</html>
